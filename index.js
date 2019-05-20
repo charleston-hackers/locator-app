@@ -23,6 +23,15 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/about", (req, res) => {
+  res.render("about-the-programmer.hbs", {
+    title: "About the programmer(s)",
+    pageTitle: "About the programmers that built the app",
+    metaDesc: "An introduction of the Charleston Hacker member(s) that built this application",
+    pageStyles: "/styles/about.css"
+  });
+});
+
 app.get("/bad", (req, res) => {
   res.send({
     errorMessage: "Unable to handle request"
